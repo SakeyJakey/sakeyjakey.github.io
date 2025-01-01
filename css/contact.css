@@ -1,10 +1,28 @@
+form {
+	display: flex;
+	flex-direction: column
+}
+
 input,
 textarea {
 	width: 100%;
 	min-height: 2rem;
+	margin-bottom: 1rem;
 }
 
 input[type="submit"] {
 	border: 0.125rem solid var(--blue);
 	background: transparent;
+}
+
+label {
+	transition: all 0.3s cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+label:has(+ input:placeholder-shown) {
+	transform: translateY(calc(100% + 0.5rem)) translateX(0.5rem);
+}
+
+label:has(+ textarea:placeholder-shown) {
+	transform: translateY(calc(100% + 0.5rem)) translateX(0.5rem);
 }

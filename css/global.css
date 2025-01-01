@@ -17,6 +17,21 @@ a {
 	color: var(--blue);
 }
 
+/* overlay for mobile */
+#nav:target {
+	position: fixed;
+	display: block !important;
+
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+
+	background: white !important;
+
+	z-index: 100;
+}
+
 nav {
 	display: flex;
 	background: white;
@@ -53,6 +68,23 @@ nav {
 			&:hover {
 				border: 1px solid var(--blue);
 				color: var(--blue);
+			}
+		}
+
+		& .nav-close {
+			display: none;
+			float: right;
+
+			margin: 0.25rem;
+
+			width: 2rem;
+			height: 2rem;
+
+			border: 0.125rem solid black;
+			border-radius: var(--pill);
+
+			& i {
+				margin: auto;
 			}
 		}
 	}
@@ -184,6 +216,10 @@ footer {
 
 		& ul {
 			display: none !important;
+
+			& .nav-close {
+				display: flex !important;
+			}
 		}
 
 		& .nav-open {
@@ -195,5 +231,9 @@ footer {
 				margin: auto;
 			}
 		}
+	}
+
+	section {
+		padding: 2rem 2rem;
 	}
 }

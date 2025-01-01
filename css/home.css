@@ -50,8 +50,8 @@ img {
 	display: flex;
 	flex-direction: row;
 
-	margin-left: 2rem;
-	margin-right: 2rem;
+	padding: 0 2rem;
+	max-width: 100%;
 
 	& .service {
 		background: var(--blue);
@@ -61,8 +61,6 @@ img {
 		border-radius: 1rem;
 
 		padding: 2rem;
-
-		width: 100%;
 
 		text-align: center;
 
@@ -88,7 +86,9 @@ img {
 		background-color: white;
 		background-image: none;
 	}
+}
 
+@media only screen and (max-width: 800px) {
 	.services {
 		flex-direction: column;
 	}

@@ -4,7 +4,8 @@ video {
 }
 
 img {
-	height: 25rem;
+	max-height: 25rem;
+	max-width: 100%;
 }
 
 .link {
