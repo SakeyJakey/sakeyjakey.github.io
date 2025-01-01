@@ -1,0 +1,19 @@
+video {
+	width: 100%;
+	border-radius: 1rem;
+}
+
+img {
+	height: 25rem;
+}
+
+.link {
+	color: var(--blue);
+	text-decoration: none;
+	font-size: larger;
+}
+
+.post {
+	margin-left: 0.5rem;
+	color: black;
+}

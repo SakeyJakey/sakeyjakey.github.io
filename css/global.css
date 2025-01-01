@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+	--blue: #69a5bf;
+	--pill: 999999px;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+a {
+	color: var(--blue);
+}
+
+nav {
+	display: flex;
+	background: white;
+
+	padding: 1rem 5rem;
+
+	& a {
+		all: unset; /* prevent links from having default styles */
+		cursor: pointer;
+	}
+
+	& .nav-open {
+		display: none;
+	}
+
+	& ul {
+		margin-left: auto;
+		margin-top: auto;
+		margin-bottom: auto;
+
+		display: flex;
+		list-style-type: none;
+
+		& li {
+			padding: 0.5rem;
+			margin: 0.25rem;
+			/*text-transform: uppercase;*/
+			font-weight: bold;
+
+			border: 1px solid transparent; /* prevent moving around on hover */
+
+			transition: all 0.5s;
+
+			&:hover {
+				border: 1px solid var(--blue);
+				color: var(--blue);
+			}
+		}
+	}
+}
+
+
+
+.hero {
+	height: 16rem;
+
+	position: relative;
+
+	background-size: cover;
+	background-position: center;
+
+	& div {
+		position: absolute;
+
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.25);
+	}
+
+	& h1 {
+		position: absolute;
+
+		left: 0;
+		right: 0;
+
+		top: 50%;
+		transform: translateY(-50%);
+		text-align: center;
+
+		font-size: 3rem;
+
+		color: white;
+	}
+}
+
+.location {
+	width: 100%;
+	height: 4rem;
+	background: lightgrey;
+
+	display: flex;
+
+	& p {
+		color: grey;
+		margin: auto;
+	}
+}
+
+.underline {
+	position: relative;
+
+	&::after {
+		content: '';
+	
+		position: absolute;
+
+		top: 3rem;
+		left: 0;
+		width: 3rem;
+		height: 0.1rem;
+
+		background-color: var(--blue);
+	}
+
+	padding-bottom: 3rem;
+}
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+section {
+	padding: 2rem 8rem;
+}
+
+footer {
+	margin-top: 5rem;
+	padding: 1rem; 
+
+	display: flex;
+	flex-direction: column;
+
+	background: white;
+
+	box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
+
+	& > * {
+		margin: auto;
+	}
+
+	& .socials {
+		padding: 1rem;
+		border-radius: var(--pill);
+		background: var(--blue);
+		color: white;
+		margin-bottom: 1rem;
+		text-decoration: none;
+	}
+}
+
+.to-top {
+	position: fixed;
+
+	background-color: white;
+	
+	padding: 1rem;
+	
+	border: 1px solid black;
+	border-radius: var(--pill);
+
+	bottom: 1rem;
+	right: 1rem;
+
+	text-decoration: none;
+	color: black;
+
+	z-index: 100;
+}
+
+@media only screen and (max-width: 600px) {
+	nav {
+		padding: 1rem 1rem;
+
+		& ul {
+			display: none !important;
+		}
+
+		& .nav-open {
+			display: flex !important;
+
+			margin-left: auto;
+					
+			& i {
+				margin: auto;
+			}
+		}
+	}
+}

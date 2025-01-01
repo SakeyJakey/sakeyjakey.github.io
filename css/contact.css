@@ -1,0 +1,10 @@
+input,
+textarea {
+	width: 100%;
+	min-height: 2rem;
+}
+
+input[type="submit"] {
+	border: 0.125rem solid var(--blue);
+	background: transparent;
+}
