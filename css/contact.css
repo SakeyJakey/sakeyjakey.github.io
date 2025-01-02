@@ -21,8 +21,10 @@ label {
 
 label:has(+ input:placeholder-shown) {
 	transform: translateY(calc(100% + 0.5rem)) translateX(0.5rem);
+	color: grey;
 }
 
 label:has(+ textarea:placeholder-shown) {
 	transform: translateY(calc(100% + 0.5rem)) translateX(0.5rem);
+	color: grey;
 }

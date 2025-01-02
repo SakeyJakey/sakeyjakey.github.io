@@ -26,9 +26,11 @@ img {
 	max-width: 100%;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
 	section {
 		flex-direction: column;
+		width: 50%;
+		margin: auto;
 
 		& div {
 			margin: auto;
