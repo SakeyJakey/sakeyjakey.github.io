@@ -1,0 +1,47 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero.astro";
+import ServiceCard from "../../components/ServiceCard.astro";
+import { servicesData } from "../../data/services";
+import { siteConfig } from "../../data/site";
+---
+
+<Layout title={`Services | ${siteConfig.name}`} description="Explore Kulexar's comprehensive consultancy services: Passive Fire Protection, Sustainability, SHEQ Management, and Procurement.">
+  
+  <Hero
+    title="Our Consultancy Services"
+    subtitle="Expert support in Passive Fire Protection, Net Zero, SHEQ Management, and Strategic Procurement."
+    bgImage="/img/services-banner.jpg"
+    breadcrumbItems={[{ label: "Services" }]}
+  />
+
+  <section class="py-16 sm:py-24 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Bespoke Compliance Solutions
+        </h2>
+        <p class="text-slate-400 text-base leading-relaxed">
+          Select a service domain below to learn how our Chartered professionals can support your organization's audit readiness, risk mitigation, and ESG strategy.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {
+          servicesData.map((service) => (
+            <ServiceCard
+              title={service.title}
+              description={service.shortDescription}
+              image={service.cardImage}
+              slug={service.slug}
+              iconName={service.iconName}
+            />
+          ))
+        }
+      </div>
+
+    </div>
+  </section>
+
+</Layout>

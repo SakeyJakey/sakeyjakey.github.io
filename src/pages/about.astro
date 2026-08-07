@@ -1,0 +1,135 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import { siteConfig } from "../data/site";
+import { ShieldCheck, Target, Award, Users, CheckCircle2 } from "@lucide/astro";
+---
+
+<Layout title={`About Us | ${siteConfig.name}`} description="Learn about Kulexar Consulting, our Chartered professionals, and our mission to support your compliance and ESG strategy.">
+  
+  <Hero
+    title="About Kulexar"
+    subtitle="Chartered professionals delivering responsive, cost-effective, and bespoke compliance solutions."
+    bgImage="/img/about-banner.jpg"
+    breadcrumbItems={[{ label: "About" }]}
+  />
+
+  <div class="py-16 sm:py-24 bg-slate-950 space-y-20">
+    
+    <!-- Section 1: About Kulexar -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        <div class="space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#69a5bf]/10 border border-[#69a5bf]/30 text-[#69a5bf] text-xs font-semibold uppercase">
+            <Award class="w-4 h-4" />
+            <span>Who We Are</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Specialists in Compliance & ESG Strategy
+          </h2>
+          <p class="text-slate-300 text-base leading-relaxed">
+            Kulexar Consulting specialises in Passive Fire Protection compliance, Sustainability, and Net Zero. With our expertise, we aim to support your business in achieving a high standard of compliance and best practice in delivering your ESG strategy.
+          </p>
+          <p class="text-slate-400 text-base leading-relaxed">
+            Our experienced team of Chartered professionals is ready to provide you with responsive and cost-effective, bespoke solutions to meet your business needs.
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 pt-4 border-t border-slate-800">
+            <div class="space-y-1">
+              <span class="text-2xl font-bold text-white">Bespoke</span>
+              <p class="text-xs text-slate-400">Tailored solutions for your organization</p>
+            </div>
+            <div class="space-y-1">
+              <span class="text-2xl font-bold text-white">Chartered</span>
+              <p class="text-xs text-slate-400">Qualified and competent assessors</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="rounded-3xl overflow-hidden border border-slate-800 shadow-2xl">
+            <img
+              src="/img/about-earth.jpg"
+              alt="Sustainability and Compliance"
+              class="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 2: What We Do -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-slate-900/60 rounded-3xl border border-slate-800">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center p-6 sm:p-10">
+        
+        <div class="relative order-2 lg:order-1">
+          <div class="rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
+            <img
+              src="/img/about-corridor.jpg"
+              alt="Building Fire Safety & Compartmentation"
+              class="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+
+        <div class="space-y-6 order-1 lg:order-2">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#69a5bf]/10 border border-[#69a5bf]/30 text-[#69a5bf] text-xs font-semibold uppercase">
+            <Target class="w-4 h-4" />
+            <span>Our Core Capabilities</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            What We Do
+          </h2>
+
+          <div class="space-y-5 text-sm">
+            <div class="space-y-1.5">
+              <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                <CheckCircle2 class="w-5 h-5 text-[#69a5bf]" />
+                <span>Passive Fire Protection</span>
+              </h3>
+              <p class="text-slate-400 leading-relaxed pl-7">
+                We provide expert surveys and advice relating to all elements of passive fire protection in construction, including fire doors, fire compartmentation, and passive fire stopping.
+              </p>
+            </div>
+
+            <div class="space-y-1.5">
+              <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                <CheckCircle2 class="w-5 h-5 text-[#69a5bf]" />
+                <span>Sustainability & Net Zero</span>
+              </h3>
+              <p class="text-slate-400 leading-relaxed pl-7">
+                Our expertise can help you embed sustainability within your operations and progress your net zero journey by decarbonising your business. Our services include policy development, energy usage reviews, and best practice workshops.
+              </p>
+            </div>
+
+            <div class="space-y-1.5">
+              <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                <CheckCircle2 class="w-5 h-5 text-[#69a5bf]" />
+                <span>Safety, Health, Environment & Quality (SHEQ)</span>
+              </h3>
+              <p class="text-slate-400 leading-relaxed pl-7">
+                Our services support you in meeting all of your SHEQ requirements, including management systems (ISO 9001, ISO 14001), risk assessments, training, and site audits.
+              </p>
+            </div>
+
+            <div class="space-y-1.5">
+              <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                <CheckCircle2 class="w-5 h-5 text-[#69a5bf]" />
+                <span>Procurement</span>
+              </h3>
+              <p class="text-slate-400 leading-relaxed pl-7">
+                Our expertise includes policy and strategy development for responsible sourcing, supply base rationalisation, bid writing, and award submission services.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+</Layout>

@@ -1,0 +1,112 @@
+---
+import { Send, Mail, User, Tag, MessageSquare } from "@lucide/astro";
+import { siteConfig } from "../data/site";
+---
+
+<div class="glass-panel p-6 sm:p-10 rounded-3xl border border-slate-800 shadow-2xl relative overflow-hidden">
+  <div class="absolute -top-24 -right-24 w-60 h-60 bg-[#69a5bf]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="space-y-2 mb-8">
+    <h3 class="text-2xl font-bold text-white tracking-tight">Send Us a Message</h3>
+    <p class="text-slate-400 text-sm">
+      Fill out the form below or email us directly at{" "}
+      <a href={`mailto:${siteConfig.contactEmail}`} class="text-[#69a5bf] underline font-medium">{siteConfig.contactEmail}</a>.
+    </p>
+  </div>
+
+  <form class="space-y-6" action={`mailto:${siteConfig.contactEmail}`} method="post" enctype="text/plain">
+    <!-- Name & Email Row -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      
+      <!-- Name Field -->
+      <div class="space-y-2">
+        <label for="name" class="block text-xs font-semibold uppercase tracking-wider text-slate-300">
+          Your Name <span class="text-[#69a5bf]">*</span>
+        </label>
+        <div class="relative">
+          <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500">
+            <User class="w-4 h-4" />
+          </div>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="John Doe"
+            class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-900 border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#69a5bf] focus:ring-2 focus:ring-[#69a5bf]/20 transition-all"
+          />
+        </div>
+      </div>
+
+      <!-- Email Field -->
+      <div class="space-y-2">
+        <label for="email" class="block text-xs font-semibold uppercase tracking-wider text-slate-300">
+          Email Address <span class="text-[#69a5bf]">*</span>
+        </label>
+        <div class="relative">
+          <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500">
+            <Mail class="w-4 h-4" />
+          </div>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="john@example.com"
+            class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-900 border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#69a5bf] focus:ring-2 focus:ring-[#69a5bf]/20 transition-all"
+          />
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Subject Field -->
+    <div class="space-y-2">
+      <label for="subject" class="block text-xs font-semibold uppercase tracking-wider text-slate-300">
+        Subject
+      </label>
+      <div class="relative">
+        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500">
+          <Tag class="w-4 h-4" />
+        </div>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          placeholder="e.g. Fire Door Survey Inquiry"
+          class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-900 border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#69a5bf] focus:ring-2 focus:ring-[#69a5bf]/20 transition-all"
+        />
+      </div>
+    </div>
+
+    <!-- Message Field -->
+    <div class="space-y-2">
+      <label for="message" class="block text-xs font-semibold uppercase tracking-wider text-slate-300">
+        Message <span class="text-[#69a5bf]">*</span>
+      </label>
+      <div class="relative">
+        <div class="absolute top-3.5 left-3.5 pointer-events-none text-slate-500">
+          <MessageSquare class="w-4 h-4" />
+        </div>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          maxlength="400"
+          required
+          placeholder="How can Kulexar assist your business?"
+          class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-900 border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#69a5bf] focus:ring-2 focus:ring-[#69a5bf]/20 transition-all"
+        ></textarea>
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button
+      type="submit"
+      class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-[#69a5bf] to-slate-700 hover:from-[#5b95af] hover:to-slate-600 text-white font-semibold text-sm transition-all shadow-lg shadow-[#69a5bf]/20 flex items-center justify-center gap-2 border border-[#69a5bf]/30"
+    >
+      <span>Send Message</span>
+      <Send class="w-4 h-4" />
+    </button>
+  </form>
+</div>

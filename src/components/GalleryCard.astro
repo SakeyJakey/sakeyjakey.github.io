@@ -1,0 +1,96 @@
+---
+import type { GalleryItem } from "../data/gallery";
+import { Play, ExternalLink, FileText, Newspaper, Shield, ArrowUpRight } from "@lucide/astro";
+import SocialIcons from "./icons/SocialIcons.astro";
+
+interface Props {
+  item: GalleryItem;
+}
+
+const { item } = Astro.props;
+
+const badgeMap = {
+  video: { label: "Video", icon: Play, color: "bg-red-500/20 text-red-400 border-red-500/30" },
+  guide: { label: "PDF Guide", icon: FileText, color: "bg-amber-500/20 text-amber-400 border-amber-500/30" },
+  article: { label: "Article", icon: Newspaper, color: "bg-blue-500/20 text-blue-400 border-blue-500/30" },
+  service: { label: "Service", icon: Shield, color: "bg-[#69a5bf]/20 text-[#69a5bf] border-[#69a5bf]/30" }
+};
+
+const badge = badgeMap[item.type];
+const BadgeIcon = badge.icon;
+const primaryLink = item.externalLink || item.linkedinLink;
+const isExternal = primaryLink.startsWith("http");
+---
+
+<div class="group relative rounded-2xl bg-slate-900 border border-slate-800 hover:border-[#69a5bf]/60 overflow-hidden transition-all duration-300 flex flex-col hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#69a5bf]/15">
+  
+  <!-- Media Area -->
+  <div class="relative aspect-video w-full overflow-hidden bg-slate-950">
+    {item.type === "video" ? (
+      <video
+        controls
+        preload="metadata"
+        poster="/img/gallery-banner.jpg"
+        class="w-full h-full object-cover z-10"
+      >
+        <source src={item.mediaSrc} type={item.mediaType || "video/mp4"} />
+        Your browser does not support the video tag.
+      </video>
+    ) : (
+      <a
+        href={primaryLink}
+        target={isExternal ? "_blank" : "_self"}
+        rel={isExternal ? "noopener noreferrer" : undefined}
+        class="block w-full h-full"
+      >
+        <img
+          src={item.mediaSrc}
+          alt={item.title}
+          class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 opacity-90"
+        />
+      </a>
+    )}
+
+    <!-- Category Badge -->
+    <div class={`absolute top-3 left-3 px-3 py-1 rounded-full border text-xs font-semibold flex items-center gap-1.5 backdrop-blur-md z-20 pointer-events-none ${badge.color}`}>
+      <BadgeIcon class="w-3.5 h-3.5" />
+      <span>{badge.label}</span>
+    </div>
+  </div>
+
+  <!-- Content & Main Source Link -->
+  <a
+    href={primaryLink}
+    target={isExternal ? "_blank" : "_self"}
+    rel={isExternal ? "noopener noreferrer" : undefined}
+    class="p-6 flex-1 flex flex-col justify-between space-y-4 group/link text-left"
+  >
+    <div class="space-y-2">
+      <div class="flex items-center justify-between gap-2">
+        <span class="text-xs text-slate-500 font-medium">{item.date}</span>
+        <span class="inline-flex items-center gap-1 text-xs font-semibold text-[#69a5bf] group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform">
+          <span>View Source</span>
+          <ArrowUpRight class="w-3.5 h-3.5" />
+        </span>
+      </div>
+      <h3 class="text-lg font-bold text-white group-hover/link:text-[#69a5bf] transition-colors leading-snug">
+        {item.title}
+      </h3>
+      <p class="text-slate-400 text-sm leading-relaxed">
+        {item.description}
+      </p>
+    </div>
+
+    <!-- Secondary LinkedIn link if different from primary link -->
+    {item.externalLink && item.linkedinLink && (
+      <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between gap-3 text-xs font-medium text-slate-400">
+        <span class="text-slate-500">Also discussed on LinkedIn</span>
+        <span class="inline-flex items-center gap-1 text-slate-300 group-hover/link:text-[#69a5bf]">
+          <SocialIcons name="linkedin" class="w-3.5 h-3.5" />
+          <span>LinkedIn</span>
+        </span>
+      </div>
+    )}
+  </a>
+
+</div>

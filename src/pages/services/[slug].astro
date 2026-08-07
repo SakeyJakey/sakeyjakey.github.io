@@ -1,0 +1,115 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero.astro";
+import ContactForm from "../../components/ContactForm.astro";
+import { servicesData, type Service } from "../../data/services";
+import { siteConfig } from "../../data/site";
+import { CheckCircle2, ArrowRight, ShieldCheck, Mail } from "@lucide/astro";
+
+export function getStaticPaths() {
+  return servicesData.map((service) => ({
+    params: { slug: service.slug },
+    props: { service }
+  }));
+}
+
+interface Props {
+  service: Service;
+}
+
+const { service } = Astro.props;
+---
+
+<Layout
+  title={`${service.title} | ${siteConfig.name}`}
+  description={service.shortDescription}
+  image={service.cardImage}
+>
+  
+  <Hero
+    title={service.title}
+    subtitle={service.shortDescription}
+    bgImage={service.bannerImage}
+    breadcrumbItems={[
+      { label: "Services", href: "/services" },
+      { label: service.title }
+    ]}
+  />
+
+  <div class="py-16 sm:py-24 bg-slate-950 space-y-20">
+    
+    <!-- Service Detailed Sections -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      {
+        service.sections.map((section, idx) => {
+          const isEven = idx % 2 === 0;
+          return (
+            <div class={`grid grid-cols-1 lg:grid-cols-12 gap-10 items-center p-8 sm:p-12 rounded-3xl bg-slate-900/60 border border-slate-800 ${isEven ? "" : "lg:flex-row-reverse"}`}>
+              
+              <!-- Text Column -->
+              <div class={`space-y-6 ${section.image ? "lg:col-span-7" : "lg:col-span-12"}`}>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#69a5bf]/10 border border-[#69a5bf]/30 text-[#69a5bf] text-xs font-semibold uppercase">
+                  <ShieldCheck class="w-3.5 h-3.5" />
+                  <span>Key Capability</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                  {section.title}
+                </h2>
+                {section.description && (
+                  <p class="text-slate-300 text-base leading-relaxed">
+                    {section.description}
+                  </p>
+                )}
+
+                {section.items && section.items.length > 0 && (
+                  <ul class="space-y-3 pt-2">
+                    {section.items.map((item) => (
+                      <li class="flex items-start gap-3 text-sm text-slate-300">
+                        <CheckCircle2 class="w-5 h-5 text-[#69a5bf] shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+
+              <!-- Image Column (if present) -->
+              {section.image && (
+                <div class="lg:col-span-5 relative">
+                  <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl group">
+                    <img
+                      src={section.image}
+                      alt={section.title}
+                      class="w-full h-auto max-h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                </div>
+              )}
+
+            </div>
+          );
+        })
+      }
+    </div>
+
+    <!-- Contact & Consultation CTA Banner -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl bg-gradient-to-r from-slate-900 via-[#132233] to-slate-900 p-8 sm:p-12 border border-[#69a5bf]/30 shadow-2xl space-y-8">
+        <div class="text-center max-w-2xl mx-auto space-y-3">
+          <h3 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+            Need Expert Advice for {service.title}?
+          </h3>
+          <p class="text-slate-300 text-sm sm:text-base">
+            Speak with our Chartered professionals to arrange a consultation, desktop review, or site survey tailored to your business.
+          </p>
+        </div>
+
+        <div class="max-w-2xl mx-auto">
+          <ContactForm />
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</Layout>

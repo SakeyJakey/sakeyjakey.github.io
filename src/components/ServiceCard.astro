@@ -1,0 +1,61 @@
+---
+import { ArrowRight, ShieldAlert, Leaf, CheckCircle2, ShoppingBag } from "@lucide/astro";
+
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  slug: string;
+  iconName?: string;
+}
+
+const { title, description, image, slug, iconName } = Astro.props;
+
+const iconMap: Record<string, any> = {
+  ShieldAlert,
+  Leaf,
+  CheckCircle2,
+  ShoppingBag
+};
+
+const IconComponent = iconName ? iconMap[iconName] : ShieldAlert;
+---
+
+<a
+  href={`/services/${slug}`}
+  class="group relative rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-[#69a5bf]/60 overflow-hidden transition-all duration-300 flex flex-col hover:-translate-y-1 hover:shadow-xl hover:shadow-[#69a5bf]/10"
+>
+  <!-- Card Image Container -->
+  <div class="relative h-52 w-full overflow-hidden bg-slate-950">
+    <img
+      src={image}
+      alt={title}
+      class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out opacity-90"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent"></div>
+    
+    <!-- Floating Icon Badge -->
+    {IconComponent && (
+      <div class="absolute top-4 right-4 p-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-[#69a5bf] shadow-lg backdrop-blur-md">
+        <IconComponent class="w-5 h-5" />
+      </div>
+    )}
+  </div>
+
+  <!-- Card Body -->
+  <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+    <div class="space-y-2">
+      <h3 class="text-xl font-bold text-white group-hover:text-[#69a5bf] transition-colors leading-snug">
+        {title}
+      </h3>
+      <p class="text-slate-400 text-sm leading-relaxed line-clamp-3">
+        {description}
+      </p>
+    </div>
+
+    <div class="pt-2 flex items-center gap-2 text-sm font-semibold text-[#69a5bf] group-hover:translate-x-1 transition-transform">
+      <span>Learn More</span>
+      <ArrowRight class="w-4 h-4" />
+    </div>
+  </div>
+</a>

@@ -1,0 +1,39 @@
+---
+import { Home, ChevronRight } from "@lucide/astro";
+
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  items: BreadcrumbItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<nav aria-label="Breadcrumb" class="py-3 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+  <ol class="flex items-center flex-wrap gap-2 text-xs font-medium text-slate-400">
+    <li class="flex items-center gap-1">
+      <a href="/" class="hover:text-[#69a5bf] transition-colors flex items-center gap-1">
+        <Home class="w-3.5 h-3.5" />
+        <span>Home</span>
+      </a>
+    </li>
+    {
+      items.map((item, index) => (
+        <li class="flex items-center gap-2">
+          <ChevronRight class="w-3.5 h-3.5 text-slate-600" />
+          {item.href && index < items.length - 1 ? (
+            <a href={item.href} class="hover:text-[#69a5bf] transition-colors">
+              {item.label}
+            </a>
+          ) : (
+            <span class="text-[#69a5bf] font-semibold">{item.label}</span>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+</nav>

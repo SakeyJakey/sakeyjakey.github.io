@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import GalleryCard from "../components/GalleryCard.astro";
+import { galleryItems } from "../data/gallery";
+import { siteConfig } from "../data/site";
+---
+
+<Layout title={`Gallery & Updates | ${siteConfig.name}`} description="Browse Kulexar's media feed, guides, video summaries, and industry posts on Passive Fire Protection and Sustainability.">
+  
+  <Hero
+    title="Gallery & Knowledge Feed"
+    subtitle="Video insights, regulatory guides, articles, and updates on fire safety and ESG compliance."
+    bgImage="/img/gallery-banner.jpg"
+    breadcrumbItems={[{ label: "Gallery" }]}
+  />
+
+  <section class="py-16 sm:py-24 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-3">
+        <h2 class="text-3xl font-extrabold text-white tracking-tight">
+          Featured Media & Updates
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+          Stay informed with our technical guides, video summaries, and LinkedIn commentary on compliance best practices.
+        </p>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {
+          galleryItems.map((item) => (
+            <GalleryCard item={item} />
+          ))
+        }
+      </div>
+
+    </div>
+  </section>
+
+</Layout>

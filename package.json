@@ -1,0 +1,17 @@
+{
+  "name": "kulexar",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@lucide/astro": "^1.27.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.1.4",
+    "tailwindcss": "^4.3.3"
+  }
+}
