@@ -13,7 +13,7 @@ const badgeMap = {
   video: { label: "Video", icon: Play, color: "bg-red-500/20 text-red-400 border-red-500/30" },
   guide: { label: "PDF Guide", icon: FileText, color: "bg-amber-500/20 text-amber-400 border-amber-500/30" },
   article: { label: "Article", icon: Newspaper, color: "bg-blue-500/20 text-blue-400 border-blue-500/30" },
-  service: { label: "Service", icon: Shield, color: "bg-[#69a5bf]/20 text-[#69a5bf] border-[#69a5bf]/30" }
+  service: { label: "Service", icon: Shield, color: "bg-[#DDB536]/20 text-[#DDB536] border-[#DDB536]/30" }
 };
 
 const badge = badgeMap[item.type];
@@ -22,15 +22,14 @@ const primaryLink = item.externalLink || item.linkedinLink;
 const isExternal = primaryLink.startsWith("http");
 ---
 
-<div class="group relative rounded-2xl bg-slate-900 border border-slate-800 hover:border-[#69a5bf]/60 overflow-hidden transition-all duration-300 flex flex-col hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#69a5bf]/15">
+<div class="group relative rounded-2xl bg-slate-900 border border-slate-800 hover:border-[#DDB536]/60 overflow-hidden transition-all duration-300 flex flex-col hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#DDB536]/15">
   
   <!-- Media Area -->
   <div class="relative aspect-video w-full overflow-hidden bg-slate-950">
     {item.type === "video" ? (
       <video
         controls
-        preload="metadata"
-        poster="/img/gallery-banner.jpg"
+        preload="auto"
         class="w-full h-full object-cover z-10"
       >
         <source src={item.mediaSrc} type={item.mediaType || "video/mp4"} />
@@ -68,12 +67,12 @@ const isExternal = primaryLink.startsWith("http");
     <div class="space-y-2">
       <div class="flex items-center justify-between gap-2">
         <span class="text-xs text-slate-500 font-medium">{item.date}</span>
-        <span class="inline-flex items-center gap-1 text-xs font-semibold text-[#69a5bf] group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform">
+        <span class="inline-flex items-center gap-1 text-xs font-semibold text-[#DDB536] group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform">
           <span>View Source</span>
           <ArrowUpRight class="w-3.5 h-3.5" />
         </span>
       </div>
-      <h3 class="text-lg font-bold text-white group-hover/link:text-[#69a5bf] transition-colors leading-snug">
+      <h3 class="text-lg font-bold text-white group-hover/link:text-[#DDB536] transition-colors leading-snug">
         {item.title}
       </h3>
       <p class="text-slate-400 text-sm leading-relaxed">

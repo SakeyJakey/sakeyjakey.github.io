@@ -2,9 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import ServiceCard from "../components/ServiceCard.astro";
 import ContactForm from "../components/ContactForm.astro";
+import Pill from "../components/Pill.astro";
 import { servicesData } from "../data/services";
 import { siteConfig } from "../data/site";
-import { ArrowRight, ShieldCheck, Award, Sparkles, CheckCircle2 } from "@lucide/astro";
+import { ArrowRight, Sparkles } from "@lucide/astro";
 
 const featuredServices = servicesData;
 ---
@@ -26,19 +27,19 @@ const featuredServices = servicesData;
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
       
       <!-- Top Pill Badge -->
-      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/90 border border-[#69a5bf]/40 text-[#69a5bf] text-xs font-semibold uppercase tracking-wider backdrop-blur-md shadow-xl">
-        <Sparkles class="w-4 h-4 animate-pulse" />
-        <span>Bespoke Compliance & ESG Strategy</span>
-      </div>
+      <Pill>
+        <Sparkles class="w-4 h-4 animate-pulse text-[#DDB536]" />
+	<span>Bespoke Compliance &amp; ESG Solutions</span>
+      </Pill>
 
       <!-- Main Headline -->
       <div class="space-y-4 max-w-4xl mx-auto">
         <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-tight">
-          Your Compliance and<br class="hidden sm:block" />
+          Your Compliance and <br class="hidden sm:block" />
           <span class="gradient-text">Safety Experts</span>
         </h1>
         <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
-          Kulexar Consulting provides Chartered professional expertise in Passive Fire Protection, Sustainability, Net Zero, SHEQ Management, and Procurement.
+          Kulexar Consulting provides Chartered professional expertise in Fire Safety, QSHE Compliance Management, and Sustainability.
         </p>
       </div>
 
@@ -46,7 +47,7 @@ const featuredServices = servicesData;
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
         <a
           href="/services"
-          class="w-full sm:w-auto px-8 py-4 rounded-full bg-[#69a5bf] hover:bg-[#5b95af] text-white font-bold text-base transition-all shadow-xl shadow-[#69a5bf]/20 flex items-center justify-center gap-2 group"
+          class="w-full sm:w-auto px-8 py-4 rounded-full bg-[#DDB536] hover:bg-[#c89f2a] text-slate-950 font-bold text-base transition-all shadow-xl shadow-[#DDB536]/20 flex items-center justify-center gap-2 group"
         >
           <span>Explore Our Services</span>
           <ArrowRight class="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -62,20 +63,20 @@ const featuredServices = servicesData;
       <!-- Key Trust Metrics -->
       <div class="pt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto text-left border-t border-slate-800/80">
         <div class="space-y-1">
-          <div class="text-2xl font-bold text-white">Chartered</div>
-          <div class="text-xs text-slate-400">Industry Professionals</div>
+          <div class="text-2xl font-bold text-white text-center">Compliance</div>
+          <div class="text-xs text-slate-400 text-center">Assured</div>
         </div>
         <div class="space-y-1">
-          <div class="text-2xl font-bold text-white">100%</div>
-          <div class="text-xs text-slate-400">Audit Readiness</div>
+          <div class="text-2xl font-bold text-white text-center">Safety</div>
+          <div class="text-xs text-slate-400 text-center">Delivered</div>
         </div>
         <div class="space-y-1">
-          <div class="text-2xl font-bold text-white">Net Zero</div>
-          <div class="text-xs text-slate-400">Decarbonisation Pathways</div>
+          <div class="text-2xl font-bold text-white text-center">Sustainability</div>
+          <div class="text-xs text-slate-400 text-center">Solutions</div>
         </div>
         <div class="space-y-1">
-          <div class="text-2xl font-bold text-white">3R Approach</div>
-          <div class="text-xs text-slate-400">Review, Report, Recommend</div>
+          <div class="text-2xl font-bold text-white text-center">Operational</div>
+          <div class="text-xs text-slate-400 text-center">Excellence</div>
         </div>
       </div>
 
@@ -88,17 +89,19 @@ const featuredServices = servicesData;
       
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div class="space-y-3 max-w-2xl">
-          <div class="text-xs font-semibold text-[#69a5bf] uppercase tracking-wider">Expert Capabilities</div>
+          <Pill>
+            <span>Expert Capabilities</span>
+          </Pill>
           <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             Our Specialist Solutions
           </h2>
           <p class="text-slate-400 text-base leading-relaxed">
-            From fire safety compliance and site audits to corporate sustainability and supply chain optimization.
+            From fire risk assessments and site audits to QSHE compliance management and corporate sustainability.
           </p>
         </div>
         <a
           href="/services"
-          class="inline-flex items-center gap-2 text-sm font-bold text-[#69a5bf] hover:underline"
+          class="inline-flex items-center gap-2 text-sm font-bold text-[#DDB536] hover:underline"
         >
           <span>View All Services</span>
           <ArrowRight class="w-4 h-4" />
@@ -120,63 +123,6 @@ const featuredServices = servicesData;
         }
       </div>
 
-    </div>
-  </section>
-
-  <!-- Why Choose Kulexar Banner -->
-  <section class="py-20 bg-slate-900/50 border-y border-slate-800/80 relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        
-        <div class="space-y-6">
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#69a5bf]/10 border border-[#69a5bf]/30 text-[#69a5bf] text-xs font-semibold uppercase">
-            <Award class="w-4 h-4" />
-            <span>Why Work With Us</span>
-          </div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Responsive, Cost-Effective & Bespoke Compliance
-          </h2>
-          <p class="text-slate-300 text-base leading-relaxed">
-            With our expertise we aim to support your business in achieving a high standard of compliance and best practice in delivering your ESG strategy. Our experienced team of Chartered professionals is ready to provide tailored solutions to meet your business needs.
-          </p>
-
-          <ul class="space-y-3 pt-2 text-sm text-slate-300">
-            <li class="flex items-start gap-3">
-              <CheckCircle2 class="w-5 h-5 text-[#69a5bf] shrink-0 mt-0.5" />
-              <span>Full compliance & audit readiness for Fire Safety and SHEQ.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <CheckCircle2 class="w-5 h-5 text-[#69a5bf] shrink-0 mt-0.5" />
-              <span>Tailored ESG roadmaps & energy usage decarbonisation assessments.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <CheckCircle2 class="w-5 h-5 text-[#69a5bf] shrink-0 mt-0.5" />
-              <span>Expert supply chain segmentation, contract review & bid writing.</span>
-            </li>
-          </ul>
-
-          <div class="pt-4">
-            <a
-              href="/about"
-              class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-slate-800 hover:bg-slate-700 text-white font-semibold text-sm transition-colors border border-slate-700"
-            >
-              <span>Learn About Our Team</span>
-              <ArrowRight class="w-4 h-4" />
-            </a>
-          </div>
-        </div>
-
-        <div class="relative">
-          <div class="rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl group">
-            <img
-              src="/img/about-earth.jpg"
-              alt="Kulexar Environmental Sustainability"
-              class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
-            />
-          </div>
-        </div>
-
-      </div>
     </div>
   </section>
 

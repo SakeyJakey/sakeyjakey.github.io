@@ -6,11 +6,11 @@ import { servicesData } from "../../data/services";
 import { siteConfig } from "../../data/site";
 ---
 
-<Layout title={`Services | ${siteConfig.name}`} description="Explore Kulexar's comprehensive consultancy services: Passive Fire Protection, Sustainability, SHEQ Management, and Procurement.">
+<Layout title={`Services | ${siteConfig.name}`} description="Explore Kulexar's comprehensive consultancy services: Fire Safety, QSHE Compliance Management, and Sustainability & Net Zero.">
   
   <Hero
     title="Our Consultancy Services"
-    subtitle="Expert support in Passive Fire Protection, Net Zero, SHEQ Management, and Strategic Procurement."
+    subtitle="Expert support in Fire Safety, QSHE Compliance, and Sustainability."
     bgImage="/img/services-banner.jpg"
     breadcrumbItems={[{ label: "Services" }]}
   />
@@ -22,12 +22,9 @@ import { siteConfig } from "../../data/site";
         <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
           Bespoke Compliance Solutions
         </h2>
-        <p class="text-slate-400 text-base leading-relaxed">
-          Select a service domain below to learn how our Chartered professionals can support your organization's audit readiness, risk mitigation, and ESG strategy.
-        </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {
           servicesData.map((service) => (
             <ServiceCard

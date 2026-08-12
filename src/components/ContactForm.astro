@@ -4,13 +4,13 @@ import { siteConfig } from "../data/site";
 ---
 
 <div class="glass-panel p-6 sm:p-10 rounded-3xl border border-slate-800 shadow-2xl relative overflow-hidden">
-  <div class="absolute -top-24 -right-24 w-60 h-60 bg-[#69a5bf]/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute -top-24 -right-24 w-60 h-60 bg-[#DDB536]/10 rounded-full blur-3xl pointer-events-none"></div>
 
   <div class="space-y-2 mb-8">
     <h3 class="text-2xl font-bold text-white tracking-tight">Send Us a Message</h3>
     <p class="text-slate-400 text-sm">
       Fill out the form below or email us directly at{" "}
-      <a href={`mailto:${siteConfig.contactEmail}`} class="text-[#69a5bf] underline font-medium">{siteConfig.contactEmail}</a>.
+      <a href={`mailto:${siteConfig.contactEmail}`} class="text-[#DDB536] underline font-medium">{siteConfig.contactEmail}</a>.
     </p>
   </div>
 
@@ -21,7 +21,7 @@ import { siteConfig } from "../data/site";
       <!-- Name Field -->
       <div class="space-y-2">
         <label for="name" class="block text-xs font-semibold uppercase tracking-wider text-slate-300">
-          Your Name <span class="text-[#69a5bf]">*</span>
+          Your Name <span class="text-[#DDB536]">*</span>
         </label>
         <div class="relative">
           <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500">
@@ -33,7 +33,7 @@ import { siteConfig } from "../data/site";
             name="name"
             required
             placeholder="John Doe"
-            class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-900 border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#69a5bf] focus:ring-2 focus:ring-[#69a5bf]/20 transition-all"
+            class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-900 border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#DDB536] focus:ring-2 focus:ring-[#DDB536]/20 transition-all"
           />
         </div>
       </div>
@@ -41,7 +41,7 @@ import { siteConfig } from "../data/site";
       <!-- Email Field -->
       <div class="space-y-2">
         <label for="email" class="block text-xs font-semibold uppercase tracking-wider text-slate-300">
-          Email Address <span class="text-[#69a5bf]">*</span>
+          Email Address <span class="text-[#DDB536]">*</span>
         </label>
         <div class="relative">
           <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500">
@@ -53,7 +53,7 @@ import { siteConfig } from "../data/site";
             name="email"
             required
             placeholder="john@example.com"
-            class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-900 border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#69a5bf] focus:ring-2 focus:ring-[#69a5bf]/20 transition-all"
+            class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-900 border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#DDB536] focus:ring-2 focus:ring-[#DDB536]/20 transition-all"
           />
         </div>
       </div>
@@ -73,8 +73,8 @@ import { siteConfig } from "../data/site";
           type="text"
           id="subject"
           name="subject"
-          placeholder="e.g. Fire Door Survey Inquiry"
-          class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-900 border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#69a5bf] focus:ring-2 focus:ring-[#69a5bf]/20 transition-all"
+          placeholder="e.g. Fire Risk Assessment Inquiry"
+          class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-900 border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#DDB536] focus:ring-2 focus:ring-[#DDB536]/20 transition-all"
         />
       </div>
     </div>
@@ -82,7 +82,7 @@ import { siteConfig } from "../data/site";
     <!-- Message Field -->
     <div class="space-y-2">
       <label for="message" class="block text-xs font-semibold uppercase tracking-wider text-slate-300">
-        Message <span class="text-[#69a5bf]">*</span>
+        Message <span class="text-[#DDB536]">*</span>
       </label>
       <div class="relative">
         <div class="absolute top-3.5 left-3.5 pointer-events-none text-slate-500">
@@ -95,7 +95,7 @@ import { siteConfig } from "../data/site";
           maxlength="400"
           required
           placeholder="How can Kulexar assist your business?"
-          class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-900 border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#69a5bf] focus:ring-2 focus:ring-[#69a5bf]/20 transition-all"
+          class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-900 border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#DDB536] focus:ring-2 focus:ring-[#DDB536]/20 transition-all"
         ></textarea>
       </div>
     </div>
@@ -103,7 +103,7 @@ import { siteConfig } from "../data/site";
     <!-- Submit Button -->
     <button
       type="submit"
-      class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-[#69a5bf] to-slate-700 hover:from-[#5b95af] hover:to-slate-600 text-white font-semibold text-sm transition-all shadow-lg shadow-[#69a5bf]/20 flex items-center justify-center gap-2 border border-[#69a5bf]/30"
+      class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-[#DDB536] hover:bg-[#c89f2a] text-slate-950 font-bold text-sm transition-all shadow-lg shadow-[#DDB536]/20 flex items-center justify-center gap-2 border border-[#DDB536]/40"
     >
       <span>Send Message</span>
       <Send class="w-4 h-4" />

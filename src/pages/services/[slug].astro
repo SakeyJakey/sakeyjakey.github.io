@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import Hero from "../../components/Hero.astro";
 import ContactForm from "../../components/ContactForm.astro";
+import Pill from "../../components/Pill.astro";
 import { servicesData, type Service } from "../../data/services";
 import { siteConfig } from "../../data/site";
 import { CheckCircle2, ArrowRight, ShieldCheck, Mail } from "@lucide/astro";
@@ -48,10 +49,6 @@ const { service } = Astro.props;
               
               <!-- Text Column -->
               <div class={`space-y-6 ${section.image ? "lg:col-span-7" : "lg:col-span-12"}`}>
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#69a5bf]/10 border border-[#69a5bf]/30 text-[#69a5bf] text-xs font-semibold uppercase">
-                  <ShieldCheck class="w-3.5 h-3.5" />
-                  <span>Key Capability</span>
-                </div>
                 <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
                   {section.title}
                 </h2>
@@ -65,7 +62,7 @@ const { service } = Astro.props;
                   <ul class="space-y-3 pt-2">
                     {section.items.map((item) => (
                       <li class="flex items-start gap-3 text-sm text-slate-300">
-                        <CheckCircle2 class="w-5 h-5 text-[#69a5bf] shrink-0 mt-0.5" />
+                        <CheckCircle2 class="w-5 h-5 text-[#DDB536] shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </li>
                     ))}

@@ -23,41 +23,165 @@ export interface Service {
 
 export const servicesData: Service[] = [
   {
-    slug: "passive-fire-protection",
-    title: "Passive Fire Protection",
-    shortDescription: "Providing audit readiness support, fire door & fire stopping surveying, and fire compartmentation evaluations.",
-    cardImage: "/img/services-pfp.jpg",
+    slug: "fire-risk-assessments",
+    title: "Fire Risk Assessments",
+    shortDescription: "We offer comprehensive assessments, carried out by our fully qualified, competent and insured fire risk assessors.",
+    cardImage: "/img/pfp-side1.jpeg",
     bannerImage: "/img/pfp-banner.png",
     iconName: "ShieldAlert",
     featuredHome: true,
-    homeDescription: "Providing audit readiness support, fire door & fire stopping surveying.",
     sections: [
       {
         title: "Fire Risk Assessments",
-        description: "A comprehensive fire risk assessment supports meeting compliance requirements and is critical to defining your fire prevention strategy. We offer a thorough survey to evaluate any potential fire hazards and a full report. Assessments are carried out by our fully qualified and competent fire risk assessors.",
-        image: "/img/pfp-side1.jpeg"
-      },
+        description: "A comprehensive fire risk assessment supports meeting compliance requirements and is critical to defining your fire prevention strategy. We offer a thorough survey to evaluate any potential fire hazards and provide a full report. Assessments are carried out by our fully qualified, competent and insured fire risk assessors.",
+        image: "/img/pfp-side1.jpeg",
+        items: [
+          "Comprehensive evaluation of potential fire hazards and risk controls",
+          "Detailed compliance report with clear, prioritised recommendations",
+          "Property-wide assessment including exit routes, signage, and fire safety systems"
+        ]
+      }
+    ]
+  },
+  {
+    slug: "fire-safety-consultancy",
+    title: "Fire Safety Consultancy Services",
+    shortDescription: "We offer fire safety advice covering passive fire protection, legislation, standards & regulations, and third-party certification schemes.",
+    cardImage: "/img/services-pfp.jpg",
+    bannerImage: "/img/pfp-banner.png",
+    iconName: "ShieldCheck",
+    featuredHome: true,
+    sections: [
       {
-        title: "Fire Compartmentation Surveys",
-        description: "This survey involves a comprehensive review covering areas such as condition, efficacy, product use and compatibility, and provision of a fire compartment report including rectification and improvement recommendations.",
-        image: "/img/pfp-side4.jpg"
-      },
+        title: "Fire Safety Consultancy Services",
+        description: "We offer fire safety advice covering passive fire protection, legislation, standards & regulations, and third-party certification schemes, provided by our fully qualified, competent and insured fire safety experts.",
+        image: "/img/services-pfp.jpg",
+        items: [
+          "Expert guidance on passive fire protection and technical compliance",
+          "Interpretation of statutory regulations, standards, and building codes",
+          "Advisory support for third-party accreditation and certification schemes",
+          "Bespoke consultancy tailored to client operational and your project needs"
+        ]
+      }
+    ]
+  },
+  {
+    slug: "compartmentation-surveys",
+    title: "Compartmentation Surveys",
+    shortDescription: "We offer comprehensive compartmentation surveys, including full report and recommendations.",
+    cardImage: "/img/pfp-side4.jpg",
+    bannerImage: "/img/pfp-banner.png",
+    iconName: "BrickWallFire",
+    featuredHome: true,
+    sections: [
       {
-        title: "Audit Preparation Services",
-        description: "Our certificated experts will support your third-party audit readiness for fire door installation, maintenance, and fire stopping schemes. Services include workshops, training, and desktop reviews.",
-        image: "/img/pfp-side3.jpg"
+        title: "Compartmentation Surveys",
+        description: "We offer comprehensive compartmentation surveys, including full report and recommendations, carried out by our fully qualified, competent and insured fire experts.",
+        image: "/img/pfp-side4.jpg",
+        items: [
+          "Detailed condition and efficacy checks on fire walls, floors, and barriers",
+          "Provision of full fire compartmentation report with remediation guidance",
+          "Surveys carried out by fully qualified, competent and insured fire experts"
+        ]
+      }
+    ]
+  },
+  {
+    slug: "fire-audit-preparation",
+    title: "Passive Fire Audit Preparation",
+    shortDescription: "We provide support to prepare for fire door & fire stopping third-party certification scheme audits like Q-Mark & FIRAS.",
+    cardImage: "/img/pfp-side3.jpg",
+    bannerImage: "/img/pfp-banner.png",
+    iconName: "ClipboardCheck",
+    featuredHome: true,
+    sections: [
+      {
+        title: "Passive Fire Audit Preparation",
+        description: "We provide support to prepare for fire door & fire stopping third-party certification scheme audits like Q-Mark & FIRAS. Our experienced experts are here to ensure you're well-equiped to pass your audit with flying colours.",
+        image: "/img/pfp-side3.jpg",
+        items: [
+          "Third-party audit readiness support for Q-Mark, FIRAS, and similar schemes",
+          "Desktop documentation and process reviews",
+          "Interactive workshops and practical team training sessions",
+          "Certificated experts guiding you through every step of audit preparation"
+        ]
+      }
+    ]
+  },
+  {
+    slug: "qshe-compliance-management",
+    title: "QSHE Compliance",
+    shortDescription: "We deliver end-to-end QSHE management services, helping you ensure regulatory compliance & achieve ISO certifications.",
+    cardImage: "/img/services-sheq.jpg",
+    bannerImage: "/img/sheq-banner.jpg",
+    iconName: "CheckCircle2",
+    featuredHome: true,
+    sections: [
+      {
+        title: "QSHE Compliance",
+        description: "We deliver end-to-end QSHE management services, helping you ensure regulatory compliance, achieve ISO certifications (such as ISO 9001, 14001, and 45001), and mitigate operational risks within your business.",
+        image: "/img/services-sheq.jpg",
+        items: [
+          "Policy drafting, development, and ongoing regulatory alignment",
+          "Implementation and audit readiness for ISO 9001, ISO 14001, and ISO 45001",
+          "Internal audit program management",
+	  "Development of risk mitigation strategies"
+        ]
+      }
+    ]
+  },
+  {
+    slug: "mock-audit-services",
+    title: "Mock Audit Services",
+    shortDescription: "We provide mock audits to help you prepare for third-party fire door & fire stopping certifications like Q-Mark & FIRAS.",
+    cardImage: "/img/services-mock.jpg",
+    bannerImage: "/img/pfp-banner.png",
+    iconName: "FileCheck",
+    featuredHome: true,
+    sections: [
+      {
+        title: "Mock Audit Services",
+        description: "We provide mock audits to help you prepare for third-party fire door & fire stopping certifications like Q-Mark & FIRAS. Our experienced experts are here to ensure you walk into your next audit with total confidence.",
+        image: "/img/pfp-side3.jpg",
+        items: [
+          "Realistic simulation of third-party Q-Mark & FIRAS certification audits",
+          "Thorough gap analysis across office procedures and site workmanship",
+          "Detailed, actionable feedback report highlighting areas for improvement",
+	  "Experienced experts providing total confidence ahead of formal audits"
+        ]
+      }
+    ]
+  },
+  {
+    slug: "spot-check-compliance-visits",
+    title: "Spot Check Compliance Visits",
+    shortDescription: "We provide independent spot check visits to ensure the continued compliance of your passive fire protection projects on-site.",
+    cardImage: "/img/services-spot.jpg",
+    bannerImage: "/img/pfp-banner.png",
+    iconName: "Search",
+    featuredHome: true,
+    sections: [
+      {
+        title: "Spot Check Compliance Visits",
+        description: "We provide independent spot check visits to ensure the continued compliance of your passive fire protection projects on-site. Our fully qualified, competent and insured experts are here to support the quality assurance of your works.",
+        image: "/img/pfp-side4.jpg",
+        items: [
+          "Independent on-site quality assurance and compliance inspections",
+          "Spot checks on active fire door and fire stopping installations",
+          "Immediate site feedback and structured compliance reports",
+          "Supported by fully qualified, competent and insured site experts"
+        ]
       }
     ]
   },
   {
     slug: "sustainability",
-    title: "Sustainability & Net Zero",
-    shortDescription: "Supporting you with your decarbonisation journey to achieve net zero through custom strategies, reviews, and workshops.",
+    title: "Sustainability",
+    shortDescription: "Supporting you in improving your environmental performance and embedding sustainable practices.",
     cardImage: "/img/services-sustainability.jpg",
     bannerImage: "/img/sustainability-banner.jpg",
     iconName: "Leaf",
     featuredHome: true,
-    homeDescription: "Supporting you with your decarbonisation journey to achieve net zero.",
     sections: [
       {
         title: "Sustainability Strategy & Implementation",
@@ -67,73 +191,25 @@ export const servicesData: Service[] = [
           "ESG strategy integration and best practice advice",
           "Tailored training and workshops focused on sustainability awareness"
         ]
-      },
+      }
+    ]
+  },
+  {
+    slug: "energy",
+    title: "Energy",
+    shortDescription: "We provide thorough energy usage assessments to identify how you can improve energy efficiency and lower operational costs.",
+    cardImage: "/img/services-energy.jpg",
+    bannerImage: "/img/sustainability-banner.jpg",
+    iconName: "Zap",
+    featuredHome: true,
+    sections: [
       {
-        title: "Net Zero & Energy Efficiency",
+        title: "Energy Efficiency",
         description: "We provide thorough energy usage assessments to identify how your business can improve energy efficiency and lower overall operating costs.",
         items: [
           "Energy usage assessments to optimize energy efficiency",
           "Development of renewable energy sourcing strategies",
           "Recommendations for energy-efficient equipment procurement"
-        ]
-      }
-    ]
-  },
-  {
-    slug: "sheq",
-    title: "Safety, Health, Environment & Quality (SHEQ)",
-    shortDescription: "Managing all of your SHEQ compliance requirements with risk assessments, ISO implementation, policies, and site audits.",
-    cardImage: "/img/services-sheq.jpg",
-    bannerImage: "/img/sheq-banner.jpg",
-    iconName: "CheckCircle2",
-    featuredHome: true,
-    homeDescription: "Managing all of your SHEQ compliance requirements.",
-    sections: [
-      {
-        title: "Health & Safety Management",
-        description: "Comprehensive health and safety consultancy to ensure full compliance and workplace safety.",
-        items: [
-          "Policy drafting, development, and ongoing review",
-          "3R (Review, Report, Recommend) assessment of Emergency Preparedness & Response",
-          "Fire Safety reviews, fire risk assessment reviews, and 3R assessments of site fire safety"
-        ]
-      },
-      {
-        title: "Environment & Quality Systems",
-        description: "Supporting your management system standard requirements and internal audit programs.",
-        items: [
-          "ISO 9001:2015 & ISO 14001 implementation, audit readiness, and inter-audit compliance",
-          "Management of internal audit programs including conducting internal audits",
-          "Comprehensive 3R programme assessment and actionable recommendations"
-        ]
-      }
-    ]
-  },
-  {
-    slug: "procurement",
-    title: "Procurement & Sourcing",
-    shortDescription: "Offering sourcing advice, contract review services, supply base review, and tender/bid writing services.",
-    cardImage: "/img/services-procurement.jpg",
-    bannerImage: "/img/procurement-banner.jpg",
-    iconName: "ShoppingBag",
-    featuredHome: false,
-    sections: [
-      {
-        title: "Supply Base Review",
-        description: "We offer a range of analytical services to support you in delivering best value from your supply base. All services involve our comprehensive 3R approach of Review, Report, and Recommendation.",
-        items: [
-          "Supply base segmentation analysis",
-          "Supply base mapping and strategic review of your supply chain",
-          "Vendor performance and value optimization reviews"
-        ]
-      },
-      {
-        title: "Responsible Sourcing & Tender Writing",
-        description: "Our Responsible Sourcing consultancy covers developing and implementing sustainable procurement within your business practices, alongside award and bid writing.",
-        items: [
-          "Policy development, implementation, and staff training",
-          "Bid writing and award submission services",
-          "Contract review and supply base rationalisation"
         ]
       }
     ]

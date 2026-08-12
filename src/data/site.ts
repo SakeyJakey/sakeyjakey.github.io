@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Kulexar",
   tagline: "Your Compliance and Business Winning Experts",
-  description: "Kulexar Consulting specialises in Passive Fire Protection compliance, Sustainability, Net Zero, SHEQ Management, and Procurement. Bespoke, cost-effective solutions for your business needs.",
+  description: "Kulexar Consulting specialises in Fire Safety, QSHE Compliance Management, and Sustainability & Net Zero. Bespoke, cost-effective solutions for your business needs.",
   contactEmail: "info@kulexar.com",
   socials: {
     linkedin: "https://uk.linkedin.com/company/kulexar-consulting",

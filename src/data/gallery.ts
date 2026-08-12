@@ -50,7 +50,7 @@ export const galleryItems: GalleryItem[] = [
     date: "10/02/2024",
     mediaSrc: "/img/gallery-pfp-services.png",
     mediaType: "image",
-    externalLink: "/services/passive-fire-protection",
+    externalLink: "/services/fire-safety-consultancy",
     linkedinLink: "https://www.linkedin.com/posts/kulexar-consulting_kulexarconsulting-kulexar-kulexarfire-activity-7150608095755325440-BZu8",
     description: "Discover our full range of fire door, fire stopping, and audit readiness consultancy services."
   },
@@ -61,7 +61,7 @@ export const galleryItems: GalleryItem[] = [
     date: "10/02/2024",
     mediaSrc: "/img/gallery-fire-stopping-services.png",
     mediaType: "image",
-    externalLink: "/services/passive-fire-protection",
+    externalLink: "/services/compartmentation-surveys",
     linkedinLink: "https://www.linkedin.com/posts/kulexar-consulting_kulexar-kulexarconsulting-kulexarfire-activity-7155910010890276864-pE7d",
     description: "Detailed surveys and technical advice covering penetration seals, compartmentation, and product compatibility."
   }

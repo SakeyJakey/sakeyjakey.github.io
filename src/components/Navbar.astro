@@ -17,7 +17,7 @@ const { currentPath = "/" } = Astro.props;
       <a href="/" class="flex items-center gap-3 group">
         <img src="/img/logo.png" alt="Kulexar Logo" class="h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-105" />
         <div class="flex flex-col">
-          <span class="text-xl font-bold tracking-tight text-white group-hover:text-[#69a5bf] transition-colors">
+          <span class="text-xl font-bold tracking-tight text-white group-hover:text-[#DDB536] transition-colors">
             {siteConfig.name}
           </span>
           <span class="text-[10px] uppercase font-semibold tracking-wider text-slate-400 hidden sm:inline-block">
@@ -36,7 +36,7 @@ const { currentPath = "/" } = Astro.props;
                 href={link.href}
                 class={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 ${
                   isActive
-                    ? "bg-[#69a5bf] text-white shadow-sm font-semibold"
+                    ? "bg-[#DDB536] text-slate-950 font-bold shadow-sm"
                     : "text-slate-300 hover:text-white hover:bg-slate-800/80"
                 }`}
               >
@@ -50,11 +50,11 @@ const { currentPath = "/" } = Astro.props;
       <!-- CTA & Mobile Toggle -->
       <div class="flex items-center gap-3">
         <a
-          href="/contact"
-          class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-[#69a5bf] to-slate-700 hover:from-[#5b95af] hover:to-slate-600 transition-all shadow-lg shadow-[#69a5bf]/10 border border-[#69a5bf]/30"
+          href="/sustainability-loft"
+          class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold text-slate-950 bg-[rgb(74,168,218)] hover:opacity-90 transition-all shadow-lg shadow-[rgb(74,168,218)]/20 border border-[rgb(74,168,218)]/40"
         >
-          <span>Get in Touch</span>
-          <ArrowRight class="w-4 h-4" />
+          <img src="/img/sl.png" alt="Sustainability Loft" class="h-6 w-auto object-contain" />
+          <ArrowRight class="w-4 h-4 shrink-0 text-slate-950" />
         </a>
 
         <!-- Mobile Menu Button -->
@@ -81,7 +81,7 @@ const { currentPath = "/" } = Astro.props;
             href={link.href}
             class={`block px-4 py-3 rounded-xl text-base font-medium transition-colors ${
               isActive
-                ? "bg-[#69a5bf]/20 text-[#69a5bf] font-semibold border border-[#69a5bf]/30"
+                ? "bg-[#DDB536]/20 text-[#DDB536] font-semibold border border-[#DDB536]/30"
                 : "text-slate-300 hover:text-white hover:bg-slate-900"
             }`}
           >
@@ -92,11 +92,11 @@ const { currentPath = "/" } = Astro.props;
     }
     <div class="pt-2">
       <a
-        href="/contact"
-        class="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl text-base font-semibold text-white bg-[#69a5bf] hover:bg-[#5b95af] transition-colors"
+        href="/sustainability-loft"
+        class="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-xl text-base font-bold text-slate-950 bg-[rgb(74,168,218)] hover:opacity-90 transition-colors"
       >
-        <span>Get in Touch</span>
-        <ArrowRight class="w-4 h-4" />
+        <img src="/img/sl.png" alt="Sustainability Loft" class="h-7 w-auto object-contain" />
+        <ArrowRight class="w-4 h-4 shrink-0 text-slate-950" />
       </a>
     </div>
   </div>

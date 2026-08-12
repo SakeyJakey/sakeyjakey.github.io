@@ -3,6 +3,7 @@
 @layer base {
   :root {
     --brand-primary: #69a5bf;
+    --brand-gold: #DDB536;
     --brand-dark: #1e293b;
     --brand-darker: #0f172a;
     --brand-accent: #38bdf8;
@@ -14,7 +15,7 @@
   }
 
   body {
-    @apply bg-slate-950 text-slate-100 antialiased selection:bg-[#69a5bf] selection:text-white min-h-screen flex flex-col;
+    @apply bg-slate-950 text-slate-100 antialiased selection:bg-[#DDB536] selection:text-slate-950 min-h-screen flex flex-col;
   }
 }
 
@@ -34,7 +35,7 @@
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #ffffff 0%, #69a5bf 50%, #93c5fd 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #DDB536 60%, #fef08a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
