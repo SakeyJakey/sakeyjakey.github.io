@@ -1,0 +1,541 @@
+---
+import "../styles/global.css";
+import { ArrowRight, Laptop, Presentation, Video, HeartHandshake, Mail, ShieldCheck, CheckCircle2, Globe, Sparkles, ExternalLink, RefreshCw } from "@lucide/astro";
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Sustainability Loft | Raising the Profile of Sustainability</title>
+    <meta name="description" content="Sustainability Loft is a charitable initiative powered by Kulexar Consulting — focused on educational talks, sustainability news, and refurbishing ThinkPads for free community distribution." />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+    </style>
+  </head>
+  <body class="!bg-slate-50 !text-slate-800 antialiased selection:bg-[rgb(119,230,128)] selection:text-slate-900 min-h-screen flex flex-col">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-[rgb(74,168,218)] text-slate-950 text-xs font-semibold py-2 px-4 text-center tracking-wide flex items-center justify-center gap-2">
+      <span class="inline-block w-2 h-2 rounded-full bg-[rgb(119,230,128)]"></span>
+      <span>A Community & Environmental Initiative Powered by Kulexar Consulting</span>
+      <a href="/" class="underline hover:text-white transition-colors ml-2 font-bold inline-flex items-center gap-1">
+        <span>Visit Kulexar Main Site</span>
+        <ExternalLink class="w-3 h-3" />
+      </a>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-[rgb(74,168,218)] border-b border-[rgb(60,150,200)] shadow-md transition-all p-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          
+          <!-- Logo & Brand -->
+          <a href="/sustainability-loft" class="flex items-center gap-3 group">
+            <img src="/img/sl.png" alt="Sustainability Loft" class="h-16 w-auto object-contain transition-transform group-hover:scale-105" />
+          </a>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex items-center gap-8 text-xl font-bold text-slate-950">
+            <a href="#about" class="hover:text-white transition-colors">About Us</a>
+            <a href="#initiatives" class="hover:text-white transition-colors">Our Initiatives</a>
+            <!-- <a href="#thinkpad" class="hover:text-white transition-colors">ThinkPad Project</a> -->
+            <a href="#talks" class="hover:text-white transition-colors">Talks & Media</a>
+            <a href="#gallery" class="hover:text-white transition-colors">Gallery</a>
+            <a href="#get-involved" class="hover:text-white transition-colors">Get Involved</a>
+          </nav>
+
+          <!-- Action Button -->
+					<!--
+          <div class="flex items-center gap-3">
+            <a
+              href="#get-involved"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold text-slate-950 bg-[rgb(119,230,128)] hover:bg-[rgb(100,215,110)] transition-all shadow-md shadow-[rgb(119,230,128)]/20"
+            >
+              <span>Support Our Cause</span>
+              <ArrowRight class="w-4 h-4" />
+            </a>
+          </div>
+					-->
+
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section with Nature Backdrop -->
+    <section class="relative bg-slate-900 text-white overflow-hidden py-24 sm:py-32">
+      <!-- Nature Background Image -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="/img/sustainability-banner.jpg"
+          alt="Nature Landscape Background"
+          class="w-full h-full object-cover object-center opacity-30"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/90 to-slate-900/70"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl space-y-6">
+          
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[rgb(119,230,128)]/20 border border-[rgb(119,230,128)]/40 text-[rgb(119,230,128)] text-xs font-bold uppercase tracking-wider">
+            <Sparkles class="w-3.5 h-3.5" />
+            <span>Community & Environmental Action</span>
+          </div>
+
+					<img src="/img/sl.png" alt="Sustainability Loft" class="h-24 w-auto object-contain transition-transform group-hover:scale-105" />
+
+          <h1 class="text-4xl sm:text-3xl font-extrabold tracking-tight text-white leading-tight">
+						Building Sustainability Awareness Through <span class="text-[rgb(119,230,128)]">Education, Engagement and Action</span>.
+          </h1>
+
+          <p class="text-lg sm:text-xl text-slate-300 leading-relaxed font-normal">
+						Our initiative is dedicated to making sustainability accessible, relevant and inspiring for people of all ages and backgrounds. Through monthly sustainability news and insight videos, educational talks, community engagement and partnerships with leading sustainability organisations, we aim to increase understanding of environmental and social challenges while highlighting practical solutions that individuals, businesses and communities can adopt.
+          </p>
+
+          <div class="pt-4 flex flex-wrap gap-4 items-center">
+            <a
+              href="#initiatives"
+              class="px-7 py-3.5 rounded-full bg-[rgb(74,168,218)] hover:bg-[rgb(60,150,200)] text-slate-950 font-bold text-base transition-all shadow-lg shadow-[rgb(74,168,218)]/25 flex items-center gap-2"
+            >
+              <span>Explore Our Work</span>
+              <ArrowRight class="w-5 h-5" />
+            </a>
+            <a
+              href="#talks"
+              class="px-7 py-3.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-base transition-all flex items-center gap-2"
+            >
+              <span>Talks and Media</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Core Values Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-6 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[rgb(74,168,218)]/10 text-[rgb(74,168,218)] text-xs font-bold uppercase tracking-wider">
+              <span>Our Purpose</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+              Action-Driven Sustainability for Everyday Communities
+            </h2>
+            <p class="text-slate-600 text-base leading-relaxed">
+              At Sustainability Loft, we believe that real environmental impact comes from practical, accessible action. Operating as a sub-entity of Kulexar Consulting, we turn corporate ESG principles into grassroots community benefits.
+            </p>
+            <p class="text-slate-600 text-base leading-relaxed">
+              Through hardware circularity, educational outreach, and digital media, we empower individuals and institutions to adopt sustainable habits and bridge the digital divide.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4 pt-2">
+              <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                <div class="text-2xl font-extrabold text-[rgb(74,168,218)]">100%</div>
+                <div class="text-xs font-semibold text-slate-600 mt-1">Non-Profit & Charitable</div>
+              </div>
+              <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                <div class="text-2xl font-extrabold text-[rgb(119,230,128)]">Circular</div>
+                <div class="text-xs font-semibold text-slate-600 mt-1">E-Waste Reduction</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 relative">
+            <div class="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200">
+              <img
+                src="/img/about-earth.jpg"
+                alt="Earth and Sustainability"
+                class="w-full h-80 sm:h-96 object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-8">
+                <div class="text-white space-y-1">
+                  <p class="text-sm font-bold text-[rgb(119,230,128)]">Kulexar Community Initiative</p>
+                  <p class="text-lg font-bold">Making sustainability accessible, practical, and impactful.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Key Initiatives Section -->
+    <section id="initiatives" class="py-20 bg-slate-50 border-y border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[rgb(74,168,218)]/10 text-[rgb(74,168,218)] text-xs font-bold uppercase tracking-wider">
+            <span>What We Do</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Our Core Sustainable Acts
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base">
+            From educational talks to hands-on e-waste refurbishments, explore how Sustainability Loft works to make a tangible difference.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Card 1: Educational Talks -->
+          <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-[rgb(74,168,218)]/15 text-[rgb(74,168,218)] flex items-center justify-center font-bold">
+              <Presentation class="w-6 h-6" />
+            </div>
+            <h3 class="text-xl font-bold text-slate-900">Educational Talks</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              We host engaging workshops and talks for schools, community centers, and local businesses — covering climate action, circular economy, and simple sustainable lifestyle choices.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-600 pt-2">
+              <li class="flex items-center gap-2">
+                <CheckCircle2 class="w-4 h-4 text-[rgb(119,230,128)] shrink-0" />
+                <span>Customized presentations for schools & youth</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <CheckCircle2 class="w-4 h-4 text-[rgb(119,230,128)] shrink-0" />
+                <span>Actionable ESG guidance for local groups</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 2: News & Media -->
+          <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-[rgb(119,230,128)]/20 text-slate-900 flex items-center justify-center font-bold">
+              <Video class="w-6 h-6 text-emerald-700" />
+            </div>
+            <h3 class="text-xl font-bold text-slate-900">Videos & Sustainability News</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              We publish educational video content, curated sustainability news roundups, and inspiring quotes to keep the public informed and motivated on environmental progress.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-600 pt-2">
+              <li class="flex items-center gap-2">
+                <CheckCircle2 class="w-4 h-4 text-[rgb(74,168,218)] shrink-0" />
+                <span>Weekly green news summaries</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <CheckCircle2 class="w-4 h-4 text-[rgb(74,168,218)] shrink-0" />
+                <span>Short educational video clips & interviews</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 3: ThinkPad Refurbishment -->
+					<!--
+          <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-[rgb(74,168,218)]/15 text-[rgb(74,168,218)] flex items-center justify-center font-bold">
+              <Laptop class="w-6 h-6" />
+            </div>
+            <h3 class="text-xl font-bold text-slate-900">ThinkPad Giving Program</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              We collect, repair, upgrade, and clean classic ThinkPad laptops to give them a second life — providing them completely free of charge to students and individuals in need.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-600 pt-2">
+              <li class="flex items-center gap-2">
+                <CheckCircle2 class="w-4 h-4 text-[rgb(119,230,128)] shrink-0" />
+                <span>100% free hardware distribution</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <CheckCircle2 class="w-4 h-4 text-[rgb(119,230,128)] shrink-0" />
+                <span>Direct e-waste reduction & tech inclusion</span>
+              </li>
+            </ul>
+          </div>
+					-->
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ThinkPad Program Spotlight -->
+		<!--
+    <section id="thinkpad" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="p-8 sm:p-12 rounded-2xl bg-slate-900 text-white relative overflow-hidden">
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+            
+            <div class="lg:col-span-7 space-y-6">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[rgb(119,230,128)]/20 border border-[rgb(119,230,128)]/30 text-[rgb(119,230,128)] text-xs font-bold uppercase tracking-wider">
+                <RefreshCw class="w-3.5 h-3.5" />
+                <span>Hardware Circularity in Action</span>
+              </div>
+
+              <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+                The ThinkPad Revival Project
+              </h2>
+
+              <p class="text-slate-300 text-base leading-relaxed">
+                ThinkPads are legendary for their durability and repairability. Rather than letting functional enterprise laptops end up in landfills, we rescue, clean, upgrade SSDs/RAM, install Linux or clean Windows, and donate them to students, job seekers, and community charities.
+              </p>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+                <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700/80">
+                  <div class="text-xs text-slate-400 font-medium">1. Rescue</div>
+                  <div class="text-sm font-bold text-white mt-1">Old ThinkPads Collected</div>
+                </div>
+                <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700/80">
+                  <div class="text-xs text-slate-400 font-medium">2. Refurbish</div>
+                  <div class="text-sm font-bold text-[rgb(74,168,218)] mt-1">Repaired & Upgraded</div>
+                </div>
+                <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700/80">
+                  <div class="text-xs text-slate-400 font-medium">3. Donate</div>
+                  <div class="text-sm font-bold text-[rgb(119,230,128)] mt-1">100% Free Handout</div>
+                </div>
+              </div>
+
+              <div class="pt-2">
+                <a
+                  href="#get-involved"
+                  class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[rgb(119,230,128)] text-slate-950 font-bold text-sm hover:bg-[rgb(100,215,110)] transition-colors"
+                >
+                  <span>Request a Laptop or Donate Hardware</span>
+                  <ArrowRight class="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5 flex justify-center">
+              <div class="p-6 rounded-2xl bg-slate-800 border border-slate-700 w-full space-y-4 text-center">
+                <Laptop class="w-16 h-16 text-[rgb(74,168,218)] mx-auto" />
+                <h3 class="text-xl font-bold text-white">Have Old Tech to Donate?</h3>
+                <p class="text-slate-300 text-xs leading-relaxed">
+                  We accept old Lenovo ThinkPads (X, T, L, or P series), power adapters, and spare components. We erase all data securely before refurbishment.
+                </p>
+                <div class="pt-2">
+                  <span class="text-xs text-[rgb(119,230,128)] font-semibold">✔ Fully Secure Data Wiping Provided</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+		-->
+
+    <!-- Educational Talks & Media Section -->
+    <section id="talks" class="py-20 bg-slate-50 border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[rgb(74,168,218)]/10 text-[rgb(74,168,218)] text-xs font-bold uppercase tracking-wider">
+            <span>Education & Outreach</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Spreading Environmental Awareness
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base">
+            Knowledge is the foundation of change. We deliver engaging presentations and share thought-provoking content across our digital channels.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <div class="bg-white p-8 rounded-2xl border border-slate-200 flex flex-col justify-between space-y-6">
+            <div class="space-y-4">
+              <div class="p-3 w-fit rounded-xl bg-[rgb(74,168,218)]/10 text-[rgb(74,168,218)]">
+                <Presentation class="w-6 h-6" />
+              </div>
+              <h3 class="text-2xl font-bold text-slate-900">Book a Sustainability Talk</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                Looking for an engaging speaker for your school, college, or local group? We offer tailored sessions covering practical environmental actions, carbon footprint reduction, and e-waste management.
+              </p>
+            </div>
+            <a href="#get-involved" class="inline-flex items-center gap-2 text-sm font-bold text-[rgb(74,168,218)] hover:underline">
+              <span>Schedule a Speaker</span>
+              <ArrowRight class="w-4 h-4" />
+            </a>
+          </div>
+
+          <div class="bg-white p-8 rounded-2xl border border-slate-200 flex flex-col justify-between space-y-6">
+            <div class="space-y-4">
+              <div class="p-3 w-fit rounded-xl bg-[rgb(119,230,128)]/20 text-slate-900">
+                <Video class="w-6 h-6 text-emerald-700" />
+              </div>
+              <h3 class="text-2xl font-bold text-slate-900">Follow Our Video Series</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                Catch our short video clips breaking down complex environmental news, sharing inspiring quotes from climate pioneers, and demonstrating step-by-step DIY tech repairs.
+              </p>
+            </div>
+            <a href="#get-involved" class="inline-flex items-center gap-2 text-sm font-bold text-emerald-700 hover:underline">
+              <span>Connect for Video Updates</span>
+              <ArrowRight class="w-4 h-4" />
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[rgb(74,168,218)]/10 text-[rgb(74,168,218)] text-xs font-bold uppercase tracking-wider">
+            <span>Gallery</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            LinkedIn Feed & Updates
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base">
+            Explore our latest updates, initiative highlights, and posts shared directly on LinkedIn.
+          </p>
+        </div>
+
+        <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+          <div class="break-inside-avoid bg-slate-50 p-3 rounded-2xl border border-slate-200 shadow-sm flex justify-center">
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7477806073534509056?collapsed=1" height="548" width="504" class="w-full max-w-[504px] rounded-xl border-0" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+          </div>
+          <div class="break-inside-avoid bg-slate-50 p-3 rounded-2xl border border-slate-200 shadow-sm flex justify-center">
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7488905691802271744?collapsed=1" height="894" width="504" class="w-full max-w-[504px] rounded-xl border-0" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+          </div>
+          <div class="break-inside-avoid bg-slate-50 p-3 rounded-2xl border border-slate-200 shadow-sm flex justify-center">
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7472161566004760576?collapsed=1" height="894" width="504" class="w-full max-w-[504px] rounded-xl border-0" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+          </div>
+          <div class="break-inside-avoid bg-slate-50 p-3 rounded-2xl border border-slate-200 shadow-sm flex justify-center">
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7470921251595694081?collapsed=1" height="894" width="504" class="w-full max-w-[504px] rounded-xl border-0" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+          </div>
+          <div class="break-inside-avoid bg-slate-50 p-3 rounded-2xl border border-slate-200 shadow-sm flex justify-center">
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7462762977667121152?collapsed=1" height="768" width="504" class="w-full max-w-[504px] rounded-xl border-0" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+          </div>
+          <div class="break-inside-avoid bg-slate-50 p-3 rounded-2xl border border-slate-200 shadow-sm flex justify-center">
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7454976612409896961?collapsed=1" height="860" width="504" class="w-full max-w-[504px] rounded-xl border-0" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+          </div>
+          <div class="break-inside-avoid bg-slate-50 p-3 rounded-2xl border border-slate-200 shadow-sm flex justify-center">
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7454609126766219264?collapsed=1" height="860" width="504" class="w-full max-w-[504px] rounded-xl border-0" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+          </div>
+          <div class="break-inside-avoid bg-slate-50 p-3 rounded-2xl border border-slate-200 shadow-sm flex justify-center">
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7454608491157307392?collapsed=1" height="894" width="504" class="w-full max-w-[504px] rounded-xl border-0" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+          </div>
+          <div class="break-inside-avoid bg-slate-50 p-3 rounded-2xl border border-slate-200 shadow-sm flex justify-center">
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7454607795623976960?collapsed=1" height="860" width="504" class="w-full max-w-[504px] rounded-xl border-0" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+          </div>
+          <div class="break-inside-avoid bg-slate-50 p-3 rounded-2xl border border-slate-200 shadow-sm flex justify-center">
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7454156151425892352?collapsed=1" height="894" width="504" class="w-full max-w-[504px] rounded-xl border-0" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Get Involved / Contact Section -->
+    <section id="get-involved" class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="bg-slate-50 p-8 sm:p-12 rounded-3xl border border-slate-200 shadow-sm space-y-8">
+          
+          <div class="text-center space-y-3">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[rgb(74,168,218)]/10 text-[rgb(74,168,218)] text-xs font-bold uppercase tracking-wider">
+              <span>Get Touch</span>
+            </div>
+            <h2 class="text-3xl font-extrabold text-slate-900">Connect with Sustainability Loft</h2>
+            <p class="text-slate-600 text-sm">
+							Whether you want to book an educational talk, or find out how you can get involved, send us a message below.
+            </p>
+          </div>
+
+          <form class="space-y-6" action="mailto:info@kulexar.com" method="post" enctype="text/plain">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label for="sl-name" class="block text-xs font-semibold uppercase tracking-wider text-slate-700">Full Name *</label>
+                <input
+                  type="text"
+                  id="sl-name"
+                  name="name"
+                  required
+                  placeholder="Jane Doe"
+                  class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-800 text-sm focus:outline-none focus:border-[rgb(74,168,218)] focus:ring-2 focus:ring-[rgb(74,168,218)]/20"
+                />
+              </div>
+
+              <div class="space-y-2">
+                <label for="sl-email" class="block text-xs font-semibold uppercase tracking-wider text-slate-700">Email Address *</label>
+                <input
+                  type="email"
+                  id="sl-email"
+                  name="email"
+                  required
+                  placeholder="jane@example.com"
+                  class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-800 text-sm focus:outline-none focus:border-[rgb(74,168,218)] focus:ring-2 focus:ring-[rgb(74,168,218)]/20"
+                />
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <label for="sl-topic" class="block text-xs font-semibold uppercase tracking-wider text-slate-700">Inquiry Type</label>
+              <select
+                id="sl-topic"
+                name="topic"
+                class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-800 text-sm focus:outline-none focus:border-[rgb(74,168,218)] focus:ring-2 focus:ring-[rgb(74,168,218)]/20"
+              >
+                <option value="Hardware Donation">Donate Hardware or ThinkPads</option>
+                <option value="Educational Talk">Book an Educational Talk / Workshop</option>
+                <option value="General Inquiry">General Community Collaboration</option>
+              </select>
+            </div>
+
+            <div class="space-y-2">
+              <label for="sl-message" class="block text-xs font-semibold uppercase tracking-wider text-slate-700">Message *</label>
+              <textarea
+                id="sl-message"
+                name="message"
+                rows="4"
+                required
+                placeholder="Tell us about your request or how we can help..."
+                class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-800 text-sm focus:outline-none focus:border-[rgb(74,168,218)] focus:ring-2 focus:ring-[rgb(74,168,218)]/20"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-[rgb(74,168,218)] hover:bg-[rgb(60,150,200)] text-slate-950 font-bold text-sm transition-all shadow-md shadow-[rgb(74,168,218)]/20 flex items-center justify-center gap-2"
+            >
+              <span>Send Message</span>
+              <Mail class="w-4 h-4" />
+            </button>
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+        <div class="flex items-center justify-center gap-3">
+          <img src="/img/sl.png" alt="Sustainability Loft" class="h-8 w-auto object-contain brightness-200" />
+        </div>
+        <p class="text-xs text-slate-400 max-w-md mx-auto">
+          Raising the profile of sustainability to greater heights. Sustainability Loft is a charitable, community-driven sub-entity powered by Kulexar Consulting.
+        </p>
+        <div class="pt-4 text-xs text-slate-500 border-t border-slate-800/60 max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+          <span>&copy; {new Date().getFullYear()} Sustainability Loft &bull; All rights reserved.</span>
+          <a href="/" class="text-[rgb(74,168,218)] hover:underline font-medium">Return to Kulexar Consulting &rarr;</a>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
