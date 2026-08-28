@@ -11,6 +11,17 @@ export interface GalleryItem {
 }
 
 export const galleryItems: GalleryItem[] = [
+{
+    id: "building-safety-act-2022",
+    type: "guide",
+    title: "🔥 💡 This free guide, issued by The Chartered Institute of Building (CIOB), provides clear and accessible guidance on legal duties under the Building Safety Act 2022, for those commissioning building work on behalf of a business, public body, or charity",
+    date: "27/02/2024",
+    mediaSrc: "/img/bsa2022-thumbnail.png",
+    mediaType: "image",
+    externalLink: "https://www.ciob.org/sites/default/files/2026-08/CIOB%20Building%20Regulations%20August%202026.pdf",
+    linkedinLink: "https://www.linkedin.com/posts/kulexar-consulting_ciob-building-regulations-activity-7499099890904473600--jzD",
+    description: "✅️ If you need more clarity about meeting your Fire Safety responsibilities under the Building Safety Act 2022, please get in touch."
+  },
   {
     id: "pfp-summary-video",
     type: "video",
@@ -21,17 +32,7 @@ export const galleryItems: GalleryItem[] = [
     linkedinLink: "https://www.linkedin.com/posts/kulexar-consulting_passivefireprotection-firesafety-firedoors-activity-7148808568689872896-VaXD",
     description: "Watch our video summary explaining core Passive Fire Protection concepts and inspection standards."
   },
-  {
-    id: "fire-safety-guide-flats",
-    type: "guide",
-    title: "A guide to making your small block of flats safe from fire",
-    date: "27/02/2024",
-    mediaSrc: "/img/gallery-small-block-of-flats-thumbnail.png",
-    mediaType: "image",
-    externalLink: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1147631/A_guide_to_making_your_small_block_of_flats_safe_from_fire.pdf",
-    linkedinLink: "https://www.linkedin.com/posts/kulexar-consulting_helpful-fire-safety-guide-activity-7167988128647897088-XoDv",
-    description: "Government publication guide detailing essential fire safety rules for small multi-occupancy residential buildings."
-  },
+  
   {
     id: "fire-sustainability-article",
     type: "article",
