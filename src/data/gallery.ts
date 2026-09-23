@@ -11,7 +11,18 @@ export interface GalleryItem {
 }
 
 export const galleryItems: GalleryItem[] = [
-{
+  {
+    id: "fire-door-safety-week",
+    type: "service",
+    title: "🚪🔥 It's Fire Door Safety Week! Comprehensive protection doesn't stop at the door",
+    date: "23/09/2026",
+    mediaSrc: "/img/ad2.png",
+    mediaType: "image",
+    externalLink: "/services/fire-safety-consultancy",
+    linkedinLink: "",
+    description: "At Kulexar, our Fire Safety Consultancy Services provide expert guidance across passive fire protection, complex legislation & regulations, and third-party certification schemes to ensure complete compliance and protect your assets."
+  },
+  {
     id: "building-safety-act-2022",
     type: "guide",
     title: "🔥 💡 This free guide, issued by The Chartered Institute of Building (CIOB), provides clear and accessible guidance on legal duties under the Building Safety Act 2022, for those commissioning building work on behalf of a business, public body, or charity",
