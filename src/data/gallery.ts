@@ -12,6 +12,17 @@ export interface GalleryItem {
 
 export const galleryItems: GalleryItem[] = [
   {
+    id: "fire-audit-preparation",
+    type: "service",
+    title: "Facing an upcoming fire safety certification audit? Don't leave your accreditation to chance. 📋",
+    date: "23/09/2026",
+    mediaSrc: "/img/ad4.png",
+    mediaType: "image",
+    externalLink: "https://www.linkedin.com/feed/update/urn:li:share:7526739991893323776",
+    linkedinLink: "https://www.linkedin.com/feed/update/urn:li:share:7526739991893323776",
+    description: "At Kulexar, we specialize in comprehensive Fire Audit Preparation. Securing third-party certifications can be a rigorous and stressful process. Our experienced fire safety experts provide the hands-on support and guidance you need to ensure you are fully equipped to pass your audit with flying colours."
+  },
+  {
     id: "fire-door-safety-week",
     type: "service",
     title: "🚪🔥 It's Fire Door Safety Week! Comprehensive protection doesn't stop at the door",
